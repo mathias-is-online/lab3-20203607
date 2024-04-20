@@ -1,4 +1,7 @@
 package com.example.lab3_20203607;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.Log;
 
 import android.content.Intent;
@@ -39,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-
-
+        //primero checo la coenxion a internets
+        verificarConexionInternet();
 
 
         editText = findViewById(R.id.editText);
@@ -81,6 +84,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    // para verificar la conexión a Internet
+    private void verificarConexionInternet() {
+        ConnectivityManager manager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = manager.getActiveNetworkInfo();
+        boolean tieneInternet = activeNetworkInfo != null && activeNetworkInfo.isConnected();
+
+        if (tieneInternet) {
+            mostrarToast("Conexión a Internet establecida");
+        } else {
+            mostrarToast("No se detectó conexión a Internet");
+        }
+    }
+    // mostrar un Toast con un mensaje
+    private void mostrarToast(String mensaje) {
+        Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
+    }
+
+
 
 
 
@@ -93,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         OMDBService service = retrofit.create(OMDBService.class);
-        Call<Pelicula> call = service.getPelicula(apiKey, "tt3896198");
+        Call<Pelicula> call = service.getPelicula(apiKey, imdbID);
         Log.d("URL", call.request().url().toString()); // Imprimir el URL completo antes de la solicitud
 
         call.enqueue(new Callback<Pelicula>() {

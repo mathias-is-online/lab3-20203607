@@ -5,236 +5,280 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/escritores"
-        android:layout_width="170dp"
-        android:layout_height="35dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/sourcesans_medium"
-        android:text="Orden del Primo"
-        android:textColor="@color/black"
-        android:textSize="10sp"
+
+    <RelativeLayout
+        android:layout_width="413dp"
+        android:layout_height="726dp"
+        android:padding="12dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="282dp" />
-
-    <EditText
-        android:id="@+id/generos"
-        android:layout_width="170dp"
-        android:layout_height="35dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/sourcesans_medium"
-        android:text="Orden del Primo"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="236dp" />
-
-    <EditText
-        android:id="@+id/fecha"
-        android:layout_width="170dp"
-        android:layout_height="35dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/sourcesans_medium"
-        android:text="Orden del Primo"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="188dp" />
-
-    <EditText
-        android:id="@+id/director"
-        android:layout_width="170dp"
-        android:layout_height="35dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/sourcesans_medium"
-        android:text="Orden del Primo"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="145dp" />
-
-    <EditText
-        android:id="@+id/actores"
-        android:layout_width="170dp"
-        android:layout_height="35dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/sourcesans_medium"
-        android:text="Orden del Primo"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="94dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Actores"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="152dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Escritores"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="282dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fecha estreno"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="196dp" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Generos"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="236dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Director"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="103dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/movietitle"
-        android:layout_width="410dp"
-        android:layout_height="71dp"
-        android:text="Pelicula titulo"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="4dp"
-        android:background="@color/orange"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="61dp"
-        android:layout_height="65dp"
-        android:text="Trama de la película"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="380dp" />
-
-    <ScrollView
-        android:layout_width="164dp"
-        android:layout_height="144dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="336dp">
+        tools:layout_editor_absoluteX="-4dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_width="362dp"
+            android:layout_height="696dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="4dp">
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/movietitle"
+                android:layout_width="410dp"
+                android:layout_height="71dp"
+
+                android:background="@color/orange"
+                android:text="TITULO PELICULA"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Generos"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/generos"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sourcesans_medium"
+                    android:text="Orden del Primo"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Aca va al sinopsis" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+
+                    android:layout_height="wrap_content"
+                    android:text="Fecha estreno"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/fecha"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sourcesans_medium"
+                    android:text="Orden del Primo"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Actores"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/actores"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sourcesans_medium"
+                    android:text="Orden del Primo"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Director"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/director"
+                    android:layout_width="170dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sourcesans_medium"
+                    android:text="Orden del Primo"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Escritores"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/escritores"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sourcesans_medium"
+                    android:text="Orden del Primo"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="387dp"
+                android:layout_height="146dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Este es el plot de la pela:" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="412dp"
+                android:layout_height="109dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="531dp">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ratings de la película"
+                    tools:ignore="MissingConstraints" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="  Rotten Tomatoes"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/rottentomatoes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView"
+                        tools:ignore="MissingConstraints" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="  Internet Movie DB"
+                        tools:ignore="MissingConstraints" />
+
+                    <TextView
+                        android:id="@+id/internetdb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TextView"
+                        tools:ignore="MissingConstraints" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="394dp"
+                android:layout_height="73dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="133dp"
+                    android:layout_height="90dp"
+                    android:text="Conforme con la info brindada"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="31dp"
+                    tools:layout_editor_absoluteY="627dp" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regresar"
+                    tools:layout_editor_absoluteX="251dp"
+                    tools:layout_editor_absoluteY="649dp" />
+            </LinearLayout>
+
         </LinearLayout>
-    </ScrollView>
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ratings de la película"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="496dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="133dp"
-        android:layout_height="90dp"
-        android:text="Conforme con la info brindada"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="627dp"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Regresar"
-        tools:layout_editor_absoluteX="251dp"
-        tools:layout_editor_absoluteY="649dp" />
 
 
-    <LinearLayout
-        android:layout_width="412dp"
-        android:layout_height="38dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="531dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:ignore="MissingConstraints">
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="  Rotten Tomatoes"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/rottentomatoes"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView"
-                tools:ignore="MissingConstraints" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:ignore="MissingConstraints">
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="  Internet Movie DB"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/internetdb"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView"
-                tools:ignore="MissingConstraints" />
-
-        </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

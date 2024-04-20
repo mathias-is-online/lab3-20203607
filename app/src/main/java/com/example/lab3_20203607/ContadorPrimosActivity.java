@@ -51,6 +51,7 @@ public class ContadorPrimosActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_contador);
 
+        mostrarToast("Estás en la vista de contador de primos");
 
         EditText ordenPrimoEditText = findViewById(R.id.ordenprimo);
 
@@ -172,6 +173,9 @@ public class ContadorPrimosActivity extends AppCompatActivity {
             // Mostrar un mensaje de error si el campo de orden está vacío
             Toast.makeText(this, "Ingrese un número de orden", Toast.LENGTH_SHORT).show();
         }
+    }
+    private void mostrarToast(String mensaje) {
+        Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
     }
 
     private void mostrarPrimos() {
